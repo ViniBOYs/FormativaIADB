@@ -1,0 +1,5 @@
+Conclusão
+
+Não é ideal utilizar da arvore de decisão para realizar previsoes por classes
+pois os resultados não são ideais, possuindo um baixo grau de precisão, pouca quantidade de dados
+e a baixa correlação entre as grandesas rating e purchased
