@@ -1,0 +1,118 @@
+class ComponentesEletronicos {
+  String nome;
+  double valor;
+  String grandeza;
+  int qtdCompras;
+  ComponentesEletronicos(this.nome,this.valor,this.grandeza,this.qtdCompras);
+}
+
+class Resistor extends ComponentesEletronicos {
+  double preco;
+
+  Resistor(String nome, double valor, String grandeza, int qtdCompras, this.preco):super(nome,valor,grandeza,qtdCompras);
+
+  void exibInfo() {
+    print("Componente: $nome");
+    print("Valor: $valor $grandeza");
+    print("Quantidade: $qtdCompras");
+    print("Preço Unidade: $preco");
+  }
+
+  void associarComp() {
+    double total;
+    total = this.preco*this.qtdCompras;
+    print("Valor Total: $total Reais");
+  }
+}
+
+class Capacitor extends ComponentesEletronicos {
+  double preco;
+
+  Capacitor(String nome, double valor, String grandeza, int qtdCompras, this.preco):super(nome,valor,grandeza,qtdCompras);
+
+  void exibInfo() {
+    print("Componente: $nome");
+    print("Valor: $valor $grandeza");
+    print("Quantidade: $qtdCompras");
+    print("Preço Unidade: $preco");
+  }
+
+  void associarComp() {
+    double total;
+    total = this.preco*this.qtdCompras;
+    print("Valor Total: $total Reais");
+  }
+}
+
+class Indutor extends ComponentesEletronicos {
+  double preco;
+
+  Indutor(String nome, double valor, String grandeza, int qtdCompras, this.preco):super(nome,valor,grandeza,qtdCompras);
+
+  void exibInfo() {
+    print("Componente: $nome");
+    print("Valor: $valor $grandeza");
+    print("Quantidade: $qtdCompras");
+    print("Preço Unidade: $preco");
+  }
+
+  void associarComp() {
+    double total;
+    total = this.preco*this.qtdCompras;
+    print("Valor Total: $total Reais");
+  }
+}
+
+class Diodo extends ComponentesEletronicos {
+  double preco;
+
+  Diodo(String nome, double valor, String grandeza, int qtdCompras, this.preco):super(nome,valor,grandeza,qtdCompras);
+
+  void exibInfo() {
+    print("Componente: $nome");
+    print("Valor: $valor $grandeza");
+    print("Quantidade: $qtdCompras");
+    print("Preço Unidade: $preco");
+  }
+
+  void associarComp() {
+    double total;
+    total = this.preco*this.qtdCompras;
+    print("Valor Total: $total Reais");
+  }
+}
+
+class Led extends ComponentesEletronicos {
+  double preco;
+  String lumens;
+
+  Led(String nome, double valor, String grandeza, int qtdCompras, this.preco,this.lumens):super(nome,valor,grandeza,qtdCompras);
+
+  void exibInfo() {
+    print("Componente: $nome");
+    print("Valor: $valor $grandeza");
+    print("Quantidade: $qtdCompras");
+    print("Lumens: $lumens");
+    print("Preço Unidade: $preco");
+  }
+
+  void associarComp() {
+    double total;
+    total = this.preco*this.qtdCompras;
+    print("Valor Total: $total Reaus");
+  }
+}
+
+void main() {
+  Resistor resistor1k = Resistor("Resistor 1kΩ", 1000, "Ω", 50, 0.5);
+  resistor1k.exibInfo();
+  resistor1k.associarComp();
+  print('-'*50);
+  Capacitor capacitor550uf = Capacitor("Capacitor 550µf", 550, "µf", 30, 1.02);
+  capacitor550uf.exibInfo();
+  capacitor550uf.associarComp();
+  print('-'*50);
+  Led ledBranco = Led("Led Branco", 2.2, "Volts", 100, 3.6, "240 Lumens");
+  ledBranco.exibInfo();
+  ledBranco.associarComp();
+}

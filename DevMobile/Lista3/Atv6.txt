@@ -1,0 +1,55 @@
+class Produtos {
+  String nome;
+  int qtd;
+  double precoProduto;
+  String tipoComunicacao;
+  double consumoEnergia;
+  Produtos(this.nome,this.qtd,this.precoProduto,this.tipoComunicacao,this.consumoEnergia);
+}
+
+class arCondicionado extends Produtos {
+  arCondicionado(String nome, int qtd, double precoProduto, String tipoComunicacao, double consumoEnergia):super(nome,qtd,precoProduto,tipoComunicacao,consumoEnergia);
+  void ligar() {
+    print("$nome está ligado");
+  }
+  void desligar() {
+    print("$nome está desligado");
+  }
+  void ajusteTemp(double TempAmbiente, double tempDesejada) {
+    if (TempAmbiente>tempDesejada) {
+      print("Refrigerando temperatura de $TempAmbiente para $tempDesejada");
+    } else if (TempAmbiente<tempDesejada) {
+      print("Aquecendo temperatura de $TempAmbiente para $tempDesejada");
+    } else {
+      print("Temperatura já adequada, modo exaustor");
+    }
+  }
+}
+
+class Televisao extends Produtos {
+  Televisao(String nome, int qtd, double precoProduto, String tipoComunicacao, double consumoEnergia):super(nome,qtd,precoProduto,tipoComunicacao,consumoEnergia);
+
+  void ligar() {
+    print("$nome está ligado");
+  }
+  void desligar() {
+    print("$nome está desligado");
+  }
+}
+
+class Fritadeira extends Produtos {
+  Fritadeira(String nome, int qtd, double precoProduto, String tipoComunicacao, double consumoEnergia):super(nome,qtd,precoProduto,tipoComunicacao,consumoEnergia);
+
+  void ligar() {
+    print("$nome está ligado");
+  }
+  void desligar() {
+    print("$nome está desligado");
+  }
+}
+
+void main() {
+  arCondicionado arzin = arCondicionado("Ar Brastemp", 1, 2500, "Wireless", 4300);
+  arzin.ligar();
+  arzin.ajusteTemp(35,24);
+}
